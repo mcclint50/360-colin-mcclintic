@@ -22,9 +22,11 @@ func main() {
 	//main program loop
 	for restart == "y" {
 		standard := "val help"
-		fmt.Println("Welcome to the Coding Standards Validator!\n")
+		fmt.Println("Welcome to the Coding Standards Validator!")
+		fmt.Println()
 		fmt.Println("1. 100 characters per line")
-		fmt.Println("2. Tabs used for indenting\n")
+		fmt.Println("2. Tabs used for indenting")
+		fmt.Println()
 		//loops until user has selected a standard
 		for standard == "val help" {
 			//read standard input from user
@@ -35,7 +37,8 @@ func main() {
 			if (standard == "val help") {
 				fmt.Println("\nThis program is designed for you to automatically test your code. Input the number that corresponds to the coding")
 				fmt.Println("standard you would like to verify. The first one checks if each line in your code is wrapped at 100 characters.")
-				fmt.Println("The second one checks if your code uses tabs to indent instead of spaces.\n")
+				fmt.Println("The second one checks if your code uses tabs to indent instead of spaces.")
+				fmt.Println()
 			}
 		}
 		//get source code location from user
@@ -44,7 +47,8 @@ func main() {
 		input := scanner.Text()
 		//standard 1
 		if (standard == "1") {
-			fmt.Println("\nChecking your code for lines over 100 characters...\n")
+			fmt.Println("\nChecking your code for lines over 100 characters...")
+			fmt.Println()
 			//calls method from val1 module to check standard 1
 			longlines := val1.HundredChars(input)
 			//case if no lines were detected as longer than 100 characters
@@ -63,7 +67,8 @@ func main() {
 		}
 		//standard 2
 		if (standard == "2") {
-			fmt.Println("\nChecking your code for 3 spaces or more...\n")
+			fmt.Println("\nChecking your code for 3 spaces or more...")
+			fmt.Println()
 			//calls method from val2 to check standard 2
 			spacelines := val2.Spaces(input)
 			//case if no lines were detected as having 3 spaces or more
